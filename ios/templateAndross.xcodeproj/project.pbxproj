@@ -148,7 +148,6 @@
 				35F715B156FCB16D677A1FD9 /* Pods-templateAndross-tvOSTests.debug.xcconfig */,
 				64847FA281CF48B6F8B32471 /* Pods-templateAndross-tvOSTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
