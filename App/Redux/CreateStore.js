@@ -28,7 +28,12 @@ export default (rootReducer, rootSaga) => {
 
   /* ------------- Assemble Middleware ------------- */
 
-  enhancers.push(applyMiddleware(...middleware))
+  enhancers.push(
+    compose(
+      applyMiddleware(...middleware),
+      global.reduxNativeDevTools ? global.reduxNativeDevTools(/*options*/) : noop => noop
+    )
+  )
 
   // if Reactotron is enabled (default for __DEV__), we'll create the store through Reactotron
   const createAppropriateStore = createStore
